@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herman Suykerbuyk - Business Data Engineer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Herman Suykerbuyk</div>
+    <nav class="nav-links">
+      <a href="#personal">Personal</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Personal Page -->
+    <section id="personal" class="page active">
+      <div class="hero">
+        <h1 class="hero-title">Business Data Engineer</h1>
+        <p class="hero-subtitle">Platform Engineer | Data Infrastructure | ETL & Pipelines</p>
+        <div class="hero-badge">3-5 years experience</div>
+      </div>
+      <div class="about-section">
+        <h2>About Me</h2>
+        <p>I'm a Business Data Engineer with 3-5 years of experience designing and building data platforms and pipelines. Currently working as a Platform Engineer, I bridge the gap between data engineering and platform infrastructure, focusing on reliable data flow, test automation, and CI/CD practices.</p>
+        <p>I specialize in end-to-end data solutions - from ingestion and transformation to governance and delivery. My approach emphasizes testing, automation, and scalable architectures that empower data-driven decision making.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>ETL & ELT</h3>
+          <p>Airflow, dbt, data pipelines, batch processing</p>
+        </div>
+        <div class="skill-card">
+          <h3>Testing</h3>
+          <p>Pytest, data validation, test automation</p>
+        </div>
+        <div class="skill-card">
+          <h3>CI/CD</h3>
+          <p>GitHub Actions, automated pipelines</p>
+        </div>
+        <div class="skill-card">
+          <h3>Data Governance</h3>
+          <p>Data quality, lineage, documentation</p>
+        </div>
+        <div class="skill-card">
+          <h3>Data Modeling</h3>
+          <b>dbt models</b>, semantic layers</p>
+        </div>
+        <div class="skill-card">
+          <h3>Ingestion</h3>
+          <p>API integration, file transfers, streaming</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Page with Subtabs -->
+    <section id="experience" class="page">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <div class="subtabs">
+          <button class="subtab active" data-subtab="etl">ETL & ELT</button>
+          <button class="subtab" data-subtab="testing">Testing</button>
+          <button class="subtab" data-subtab="ci-cd">CI/CD</button>
+          <button class="subtab" data-subtab="governance">Data Governance</button>
+          <button class="subtab" data-subtab="modeling">Data Modeling</button>
+          <button class="subtab" data-subtab="ingestion">Data Ingestion</button>
+          <button class="subtab" data-subtab="platform">Platform Engineering</button>
+        </div>
+      </div>
+
+      <!-- ETL & ELT Subtab Content -->
+      <div id="subtab-etl" class="subtab-content active">
+        <h3>ETL & ELT</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Data Pipeline Development</h4>
+              <p>Built and maintained ETL pipelines using Apache Airflow for orchestrating data flows across multiple source systems. Implemented dbt transformations for analytics-ready data models.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Data Ingestion</h4>
+              <p>Designed automated ingestion processes for structured and unstructured data from APIs, databases, and file-based sources. Ensured data validity at entry points.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Transformation Logic</h4>
+              <p>Developed transformation layers using dbt, implementing best practices for type casting, deduplication, and business logic encapsulation. Created documentation-first approach to data models.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testing Subtab Content -->
+      <div id="subtab-testing" class="subtab-content">
+        <h3>Testing</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Data Validation Testing</h4>
+              <p>Implemented pytest-based test suites for data pipeline validation. Created tests for data quality checks, row counts, and schema validation at each pipeline stage.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Unit Tests for Transformations</h4>
+              <p>Wrote unit tests for dbt models ensuring transformation logic correctness. Integrated tests into CI pipeline to catch regressions early.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Integration Testing</h4>
+              <p>Set up end-to-end integration tests verifying data flow from ingestion through transformation to final delivery. Tested error handling and recovery scenarios.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CI/CD Subtab Content -->
+      <div id="subtab-ci-cd" class="subtab-content">
+        <h3>CI/CD</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>GitHub Actions Pipelines</h4>
+              <p>Configured automated CI/CD pipelines using GitHub Actions for dbt project testing and deployment. Pipeline runs tests on pull requests and deploys to production on merge.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Automated Testing</h4>
+              <p>Integrated pytest suite into CI pipeline, executing data validation tests on every commit. Failed tests block merge, ensuring only validated code reaches production.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Artifact Publishing</h4>
+              <p>Set up automated publishing of dbt artifacts and documentation to GitHub Pages. Integrated with code quality checks and security scanning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Governance Subtab Content -->
+      <div id="subtab-governance" class="subtab-content">
+        <h3>Data Governance</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Data Quality Metrics</h4>
+              <p>Implemented data quality monitoring and alerting systems. Created dashboards tracking completeness, uniqueness, and validity metrics across datasets.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Data Lineage</h4>
+              <p>Established data lineage tracking from source systems through transformations to final analytics outputs. Documented data flow and ownership.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Documentation Standards</h4>
+              <p>Enforced documentation standards for all data assets using dbt documentation and custom scripts. Ensured team-wide accessibility of data dictionary and model descriptions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Modeling Subtab Content -->
+      <div id="subtab-modeling" class="subtab-content">
+        <h3>Data Modeling</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>dbt Modeling</h4>
+              <p>Built incremental and snapshot models using dbt for handling slowly changing dimensions and historical analytics. Implemented dimension modeling best practices.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Semantic Layer</h4>
+              <p>Designed semantic layer for analytics consumption, ensuring consistent metrics and definitions across reports and dashboards. Collaborated with BI teams on data definitions.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Star Schema Design</h4>
+              <p>Implemented star schema patterns for analytical workloads, optimizing query performance and data accessibility for business intelligence tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Ingestion Subtab Content -->
+      <div id="subtab-ingestion" class="subtab-content">
+        <h3>Data Ingestion</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>API Integration</h4>
+              <p>Built robust API connectors for external data sources, handling authentication, rate limiting, and error recovery. Implemented retry logic and backoff strategies.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>File-Based Ingestion</h4>
+              <p>Created automated file transfer and processing pipelines for CSV, JSON, and Parquet files. Monitored file locations and triggered processing on arrival.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Streaming Sources</h4>
+              <p>Configured and monitored streaming data ingestion from various sources. Ensured data reliability and real-time availability for downstream consumption.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platform Engineering Subtab Content -->
+      <div id="subtab-platform" class="subtab-content">
+        <h3>Platform Engineering</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Platform Infrastructure</h4>
+              <p>Working as a Platform Engineer, I build and maintain the underlying infrastructure for data operations. Focus on scalable, reliable platforms that data teams can depend on.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Tooling & Automation</h4>
+              <p>Develop internal tools and automation that improve developer experience for data teams. CI/CD pipelines, testing frameworks, and operational tooling.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h4>Cross-Functional Collaboration</h4>
+              <p>Bridge between platform engineering and data teams, ensuring infrastructure meets data needs while maintaining security, governance, and performance standards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Page -->
+    <section id="education" class="page">
+      <div class="section-header">
+        <h2>Education</h2>
+      </div>
+      <div class="education-grid">
+        <div class="education-card">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p>University of Technology</p>
+          <p>Graduated: 2020</p>
+        </div>
+        <div class="education-card">
+          <h3>Data Engineering Certifications</h3>
+          <p>Various specialized courses in data platform technologies</p>
+          <p>Ongoing professional development</p>
+        </div>
+        <div class="education-card">
+          <h3>Continuous Learning</h3>
+          <p>Regular training in latest data technologies and practices</p>
+          <p>Community involvement and knowledge sharing</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page">
+      <div class="section-header">
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>Email: herman.suykerbuyk@example.com</p>
+          <p>LinkedIn: linkedin.com/in/herman-suykerbuyk</p>
+          <p>GitHub: github.com/herman-suykerbuyk</p>
+        </div>
+        <div class="contact-form">
+          <h3>Message Me</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Herman Suykerbuyk. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
