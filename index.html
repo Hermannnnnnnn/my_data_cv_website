@@ -56,6 +56,52 @@
           </div>
         </div>
       </div>
+
+      <div class="toolstack">
+        <h3>Toolstack</h3>
+        <div class="stack-groups">
+          <div class="stack-group">
+            <h4>Languages</h4>
+            <div class="stack-tags">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">SQL</span>
+              <span class="stack-tag">PL/SQL</span>
+              <span class="stack-tag">Groovy</span>
+              <span class="stack-tag">Shell</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h4>Data & Transformation</h4>
+            <div class="stack-tags">
+              <span class="stack-tag">ODI</span>
+              <span class="stack-tag">dbt</span>
+              <span class="stack-tag">Data Vault 2.0</span>
+              <span class="stack-tag">Dimensional Modelling</span>
+              <span class="stack-tag">Vaultspeed</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h4>Orchestration & Platform</h4>
+            <div class="stack-tags">
+              <span class="stack-tag">Apache Airflow</span>
+              <span class="stack-tag">IWS</span>
+              <span class="stack-tag">Databricks</span>
+              <span class="stack-tag">Lakeflow Connect</span>
+              <span class="stack-tag">AKS</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h4>Engineering Practices</h4>
+            <div class="stack-tags">
+              <span class="stack-tag">pytest</span>
+              <span class="stack-tag">GitHub Actions</span>
+              <span class="stack-tag">CI/CD</span>
+              <span class="stack-tag">Confluence</span>
+              <span class="stack-tag">JDBC</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Experience Page with Nested Tabs -->
@@ -90,8 +136,8 @@
         <div id="subtab-de-testing" class="subtab-content">
           <h3>Testing — Data Engineering</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Load testing</h4><p>I brought back to life a testing framework in PL/SQL that existed in our team but was not getting the love it needed. I added more test templates to the framework, broadened its scope to more then file ingestion tests, and stopped integrity issues before loading in the data vault and dimension model.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Unit &amp; regression testing</h4><p>I made an automated testing tool, using github, ci/cd and python, adding these technologies to the team's toolstack, knowing they would need to use them in the future when migrating to databricks. The framework itself fires off a whole batallion of tests, either on source ingestion (source to datavault) or presentation (datavault to dimensional model) and is still used today, replacing the tedious manual testing we did before. Needless to say, we found a lot of data issues, sped up the testing phase and have gained more more trust in our data from business.</p>            
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Load testing</h4><p>I brought back to life a testing framework in PL/SQL that existed in our team but was not getting the love it needed. I added more test templates to the framework, broadened its scope to more than file ingestion tests, and thereby stopped integrity issues before entering the data vault and dimension model.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Unit &amp; regression testing</h4><p>I made an automated testing tool, using github, ci/cd and python, adding these technologies to the team's toolstack, knowing they would need to use them in the future when migrating to databricks. The framework itself fires off a whole batallion of tests, either on source ingestion (source to datavault) or presentation (datavault to dimensional model) and is still used today, replacing the tedious manual testing cycle we had before. Needless to say, we found a lot of data issues, sped up the testing phase and have gained more more trust in our data from business.</p>            
             </div></div>
           </div>
         </div>
@@ -106,8 +152,8 @@
         <div id="subtab-de-documenting" class="subtab-content">
           <h3>Documenting — Data Engineering</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Revamping</h4><p>When I started in the team, i found that the documentation was spread all over the organization and a lot of it was untrustworthy. I took the initiative to gather all the documentation to one place on confluence and rewrite what i could, delegate what i couldnt.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Expanding</h4><p>After the revamping, I wrote numerous pages in order to standardize our way of working as well as help any future new colleagues get started more easily.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Revamping</h4><p>When I started in the team, i found that the documentation was spread all over the organization and a lot of it was untrustworthy. I took the initiative to gather all the documentation to one place on confluence and rewrite what i could, delegate what i couldn't.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Expanding</h4><p>After the revamping, I wrote numerous new pages in order to standardize our way of working and help any future new colleagues to get started more easily.</p></div></div>
           </div>
         </div>
       </div>
@@ -117,19 +163,14 @@
         <div class="subtabs">
           <button class="subtab active" data-subtab="pe-testing">Testing</button>
           <button class="subtab" data-subtab="pe-tooling">Tooling</button>
-          <button class="subtab" data-subtab="pe-ingestion">Ingestion</button>
           <button class="subtab" data-subtab="pe-cicd">CI/CD</button>
-          <button class="subtab" data-subtab="pe-deploy">Deploy</button>
-          <button class="subtab" data-subtab="pe-deploy">Access management</button>
-          <button class="subtab" data-subtab="pe-deploy">Connectivity</button>
         </div>
 
         <div id="subtab-pe-testing" class="subtab-content active">
           <h3>Testing — Platform</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Infra regression Testing</h4><p>I took ownership of an existing pytest regression testing framework, with which platform components could be tested after an infra release. I added a few tests and refactored the codebase, introducing fixtures, modules and markers.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Code-base Testing</h4><p>I implemented and owned the frameworks for dbt-bouncer and sqlfluff, both of which tools with which an organization can define and enforce coding standards in CI/CD.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Framework Testing</h4><p>I made a framework_testing dbt project which was used to test any customization we needed to do to our dbt framework, like tagging, materialization, caching.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Infra regression Testing</h4><p>I took ownership of an already existing pytest regression testing framework, with which platform components could be tested after an infra release. I added a few tests and refactored the codebase, introducing fixtures, modules and markers.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Code-base Testing</h4><p>I implemented and owned the frameworks for dbt-bouncer and sqlfluff. These are tools with which an organization can define and enforce coding standards in CI/CD.</p></div></div>
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Data quality</h4><p>I helped build a framework that pulls data test definitions from Collibra, saves them as dbt tests, deploys to production, runs the test and reports the results.</p></div></div>
           </div>
         </div>
@@ -148,8 +189,8 @@
               <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt</h4>
               <p>Wrote/adapted macro and materialization overwrites.</p>
               <p>Performed package upgrades and offered support to data team colleagues.</p>
-              <p>Found ways to improve parsing time and certain options reducing the number of API calls to databricks.</p>
-              <p>Fought with management for implementing and enforcing dbt-bouncer and sqlfluff. Worked with data team colleagues to determine the standards, after which I implemented theses standards and enforced them through ci/cd. I also documented how the tools work and how to use them in vscode. Offered support.</p>
+              <p>Found ways to improve parsing time and reduce the number of API calls to databricks.</p>
+              <p>Fought with management for implementing and enforcing dbt-bouncer and sqlfluff. Worked with data team colleagues to determine the standards, implemented theses standards and enforced them through ci/cd. I also documented how the tools work and how to configure vscode to use them locally.</p>
           
           </div></div>
             </div>
@@ -157,9 +198,9 @@
           <div id="tooling-airflow" class="tooling-panel">
             <div class="timeline">
               <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow</h4>
-                <p>I helped build and expand the orchestration framework: a semantic layer on top of airflow code. The goal was to prevent data team colleagues writing their own airflow code. Instead they could write a yaml file, using templated airflow tasks.</p>
-                <p>Offered support to data team colleagues whenever their airflow dag didn't do what they expected.</p>
-                <p>Found a significant boost in performance when rendering a dbt project as airflow dag.</p>
+                <p>I wrote airflow operators and helped build and expand the orchestration framework: a semantic layer on top of airflow code. The goal was to prevent data team colleagues writing their own airflow code. Instead they could write a yaml file, using templated airflow tasks.</p>
+                <p>Together with my colleagues, we searched and implemented ways to make airflow more stable.</p>
+              </div></div>
             </div>
           </div>
           <div id="tooling-databricks" class="tooling-panel">
@@ -167,9 +208,7 @@
               <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Databricks</h4>
                 <p>I developed a framework for ingesting data from SQLSERVER, using Lakeflow pipelines.</p>
                 <p>I built an ingestion framework for ingesting data from on-prem oracle databases, using spark JDBC.</p>
-                <p>I also did troubleshooting of issues, like sudden increases of cost or failing sql queries because of too many API calls to the unity catalog.</p>
-              
-              
+                <p>I investigated issues, like sudden increases of cost or failing sql queries because of too many API calls to the unity catalog.</p>
               </div></div>
             </div>
           </div>
@@ -185,18 +224,19 @@
           <h3>CI/CD — Platform</h3>
           <div class="timeline">
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>GitHub Actions</h4>
-              <p>Implemented PR validations (sqlfluff, dbt-bouncer, yaml schema validations), Branch protection rules.</p>
+              <p>Implemented PR validations (sqlfluff, dbt-bouncer, yaml schema validations) and branch protection rules.</p>
               <p>Implemented labeling of pull requests based on what's changed, offering stakeholders an overview by grouping per data product.</p>
               <p>Suggested and implemented a deploy branch strategy for when multiple people need to deploy to the test environment.</p>
               <p>Suggested and implemented a make-release pipeline, needed to eliminate human error when backmerging hotfixes and bugfixes.</p>
+              </div></div>
+            </div>
           </div>
-        </div>
+      </div>
 
       <!-- ========== LEAD TEAM ========== -->
       <div id="category-lead-team" class="category-content">
         <div class="subtabs">
           <button class="subtab active" data-subtab="lead-wayofworking">Way of Working</button>
-          <button class="subtab" data-subtab="lead-cop">Community of Practice</button>
           <button class="subtab" data-subtab="lead-future">Future-proofing</button>
         </div>
 
@@ -204,8 +244,8 @@
           <h3>Lead — Way of Working</h3>
           <div class="timeline">
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Team Efficiency</h4><p>Made organizational changes by challenging the way of working.</p>
-              <p> In my first team, I reduced unnecessary meetings, introduced COP engineering and challenged management pushing for an unsuitable framework.</p>
-              <p>In my second team, advocateed for better feature refinement, ensuring that stakeholders are named, can be consulted and are presented with the results during development. I also pushed for more demo's, since the team was very poorly T shaped.</p></div></div>
+              <p> In my first team, I reduced unnecessary meetings, introduced COP engineering and fought against management pushing for an unsuitable framework.</p>
+              <p>In my second team, advocated for better feature refinement, ensuring that stakeholders are named, can be consulted and are presented with the results during development. I also pushed for more demo's, since the team was very poorly T shaped.</p></div></div>
           </div>
         </div>
         <div id="subtab-lead-future" class="subtab-content">
@@ -222,21 +262,57 @@
       <div class="section-header">
         <h2>Education</h2>
       </div>
+
+      <h3 class="education-subtitle">Formal Education</h3>
       <div class="education-grid">
         <div class="education-card">
-          <h3>Bachelor of Science in Computer Science</h3>
-          <p>University of Technology</p>
-          <p>Graduated: 2020</p>
+          <h3>Bachelor of Science in Chemistry</h3>
+          <p>University of Antwerp, Belgium</p>
+          <p><small>Sep 2008 – Jul 2012</small></p>
         </div>
         <div class="education-card">
-          <h3>Data Engineering Certifications</h3>
-          <p>Various specialized courses in data platform technologies</p>
-          <p>Ongoing professional development</p>
+          <h3>Bachelor of Science in Mathematics</h3>
+          <p>University of Antwerp, Belgium</p>
+          <p><small>Sep 2014 – Jul 2018</small></p>
         </div>
         <div class="education-card">
-          <h3>Continuous Learning</h3>
-          <p>Regular training in latest data technologies and practices</p>
-          <p>Community involvement and knowledge sharing</p>
+          <h3>Data Science Training Program</h3>
+          <p>Cevora, Belgium</p>
+          <p><small>Apr 2022 – Sep 2022</small></p>
+        </div>
+      </div>
+
+      <h3 class="education-subtitle">Certifications</h3>
+      <div class="education-grid">
+        <div class="education-card">
+          <h3>Astronomer Certification – Apache Airflow Fundamentals</h3>
+          <p>Mar 2024</p>
+          <p><small><a href="https://www.credly.com/badges/4c4747cb-e8c3-44ac-9631-faebb1b53257/linked_in_profile" target="_blank" rel="noopener">credential ↗</a></small></p>
+        </div>
+        <div class="education-card">
+          <h3>dbt Fundamentals</h3>
+          <p>Dec 2023</p>
+          <p><small><a href="https://credentials.getdbt.com/b6d0492c-8c7f-4d3b-8be2-840a8ed39fc0#acc.7dSCGywh" target="_blank" rel="noopener">credential ↗</a></small></p>
+        </div>
+        <div class="education-card">
+          <h3>Certified Data Vault 2.0 Practitioner</h3>
+          <p>Jul 2023</p>
+          <p><small><a href="https://www.credential.net/d3e744a4-3605-43ae-bff3-290800b8cb29#acc.ihcWado1" target="_blank" rel="noopener">credential ↗</a></small></p>
+        </div>
+        <div class="education-card">
+          <h3>Databricks Lakehouse Fundamentals</h3>
+          <p>Dec 2023</p>
+          <p><small><a href="https://credentials.databricks.com/bb657983-ae44-4aa7-882b-da4859f99716#acc.WP3f42QU" target="_blank" rel="noopener">credential ↗</a></small></p>
+        </div>
+        <div class="education-card">
+          <h3>Cert Prep: Scrum Master (LinkedIn Learning)</h3>
+          <p>2026</p>
+          <p><small><a href="https://www.linkedin.com/learning/certificates/4e977e33249ab9dfdcfc1badd04461b190d524196f58c1f28ae3c31fa5c2264d/" target="_blank" rel="noopener">credential ↗</a></small></p>
+        </div>
+        <div class="education-card">
+          <h3>Scrum: Advanced (LinkedIn Learning)</h3>
+          <p>2026</p>
+          <p><small><a href="https://www.linkedin.com/learning/certificates/d1aded3c4723e477229142035c1bdf3c545fcce97c038761a92196755a59e534/" target="_blank" rel="noopener">credential ↗</a></small></p>
         </div>
       </div>
     </section>
@@ -255,18 +331,19 @@
         </div>
         <div class="contact-form">
           <h3>Message Me</h3>
-          <form class="contact-form">
+          <form class="contact-form" id="contactForm">
             <div class="form-group">
-              <input type="text" placeholder="Your Name" required>
+              <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Your Email" required>
+              <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-              <textarea rows="5" placeholder="Your Message" required></textarea>
+              <textarea rows="5" id="contact-message" name="message" placeholder="Your Message" required></textarea>
             </div>
             <button type="submit" class="btn-submit">Send Message</button>
           </form>
+          <p id="contact-status" style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-light);display:none;"></p>
         </div>
       </div>
     </section>

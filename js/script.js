@@ -91,4 +91,25 @@ document.addEventListener('DOMContentLoaded', function() {
       if (firstC) firstC.classList.add('active');
     }
   });
+
+  // ===== Contact form -> mailto (option 1, static) =====
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+      const status = document.getElementById('contact-status');
+      const to = 'suykerbuykh@gmail.com';
+      const subject = encodeURIComponent(`CV contact from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+      if (status) {
+        status.textContent = 'Opening your email app… If nothing happens, please email directly to suykerbuykh@gmail.com';
+        status.style.display = 'block';
+      }
+    });
+  }
 });
