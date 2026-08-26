@@ -30,17 +30,17 @@
       </div>
       <div class="about-section">
         <h2>About Me</h2>
-        <p>I am a Business Data Engineer with 3–5 years of experience across data engineering and platform engineering.
-          I spent two years building data transformations end‑to‑end — from ingestion pipelines to Data Vault and dimensional modelling.
-          I then expanded into platform engineering, helping create a new data platform powered by Airflow, dbt, and Databricks, enabling teams to deliver data products more efficiently, by focusing on reliable data flow, tooling, test automation, and CI/CD practices.</p>
-        <p>Beyond the technical work, I actively improve how teams operate: reducing unnecessary meetings, strengthening refinement sessions, challenging unsuitable frameworks, and introducing future‑proof solutions and COP practices.</p>
+        <p>I am a Business Data Engineer with 3–5 years of experience across data engineering and platform engineering. </p>
+        <p><b>Data engineering:</b> I spent two years building end‑to‑end data transformations — from ingestion pipelines to Data Vault and dimensional modelling.</p>
+        <p><b>Platform engineering:</b> I then expanded into platform engineering, helping create a new data platform powered by airflow, dbt, and Databricks, enabling teams to deliver data products more efficiently, by focusing on reliable data flow, tooling, test automation, and CI/CD practices.</p>
+        <p><b>Data lead:</b> Beyond the technical work, I actively improved how teams operate: reducing unnecessary meetings, organizing documentations and filling the gaps, strengthening refinement sessions, challenging unsuitable frameworks, and introducing future‑proof solutions and COP practices.</p>
       </div>
       <div class="personal-details">
         <h3>Personal Life</h3>
         <div class="personal-grid">
           <div class="personal-card">
             <h4>📍 Location</h4>
-            <p>Based in Belgium Mechelen — open to hybrid / remote. Willing to commute within region.</p>
+            <p>Based in Belgium:Mechelen — open to hybrid / remote. Willing to commute within region.</p>
           </div>
           <div class="personal-card">
             <h4>🏠 Current Circumstances</h4>
@@ -52,7 +52,7 @@
           </div>
           <div class="personal-card">
             <h4>⚖️ Work Preferences</h4>
-            <p>Open to much: after 4 years of coding, interested in facilitating organizations.</p>
+            <p>Interested in both technical and people.</p>
           </div>
         </div>
       </div>
@@ -75,54 +75,39 @@
           <button class="subtab active" data-subtab="de-etl">ETL / ELT</button>
           <button class="subtab" data-subtab="de-testing">Testing</button>
           <button class="subtab" data-subtab="de-modeling">Modeling</button>
-          <button class="subtab" data-subtab="de-ingestion">Ingestion</button>
-          <button class="subtab" data-subtab="de-governance">Governance</button>
-          <button class="subtab" data-subtab="de-cicd">CI/CD</button>
+          <button class="subtab" data-subtab="de-documenting">Documenting</button>
         </div>
 
         <div id="subtab-de-etl" class="subtab-content active">
           <h3>ETL &amp; ELT — Data Engineering</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Pipeline Development</h4><p>Built and maintained ETL pipelines using ODI (Oracle) and dbt for transformations, and IWS / Apache Airflow for orchestration. Authored reusable orchestration tasks (SQL tasks, Lakeflow pipeline creators, notebook tasks) for the data team.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Transformation Logic</h4><p>Developed transformation layers in dbt with best practices for type casting, deduplication and business-logic encapsulation. Documentation-first approach to models.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Pipeline Development</h4><p>I built and maintained E2E ETL pipelines using ODI (Oracle) and dbt for transformations, and IWS and Apache Airflow for orchestration. A lot of my work as data engineer went into writing PL/SQL and also Groovy, with which i could generate the real development scripts, speeding up the development phase.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Ops</h4><p>In rotation with colleagues, I performed with eagerness the weekly role of Ops within the team. I found ops very useful to learn the team products as well as fun to find and trouble shoot issues occuring on production. Doing so, I found and presented numerous ways for the team to do better ops, by discovering metadata tables and digging for gold.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Transformation Logic</h4><p>I helped write down <b>the big book of dbt</b>: the organization's manual of best practices for type casting, deduplication, business-logic encapsulation, test tagging, naming conventions.</p></div></div>
           </div>
         </div>
 
         <div id="subtab-de-testing" class="subtab-content">
           <h3>Testing — Data Engineering</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Data Validation</h4><p>pytest suites for row-count, schema and quality checks at each pipeline stage. Great Expectations-style assertions.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt Tests</h4><p>Unit &amp; generic tests (unique, not_null, accepted_values) for models — integrated in CI to catch regressions.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Load testing</h4><p>I brought back to life a testing framework in PL/SQL that existed in our team but was not getting the love it needed. I added more test templates to the framework, broadened its scope to more then file ingestion tests, and stopped integrity issues before loading in the data vault and dimension model.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Unit &amp; regression testing</h4><p>I made an automated testing tool, using github, ci/cd and python, adding these technologies to the team's toolstack, knowing they would need to use them in the future when migrating to databricks. The framework itself fires off a whole batallion of tests, either on source ingestion (source to datavault) or presentation (datavault to dimensional model) and is still used today, replacing the tedious manual testing we did before. Needless to say, we found a lot of data issues, sped up the testing phase and have gained more more trust in our data from business.</p>            
+            </div></div>
           </div>
         </div>
 
         <div id="subtab-de-modeling" class="subtab-content">
           <h3>Modeling — Data Engineering</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Data Vault &amp; Dimensional</h4><p>End-to-end from ingestion through Data Vault to dimensional modelling (dimensions/facts, star schema) in dbt.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Incremental &amp; Snapshots</h4><p>Incremental models and snapshots for SCD2 history, query-performance optimised for BI.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Data Vault &amp; Dimensional</h4><p>I developed end-to-end solutions from ingestion through Data Vault to dimensional modelling (dimensions/facts, star schema).</p></div></div>
           </div>
         </div>
 
-        <div id="subtab-de-ingestion" class="subtab-content">
-          <h3>Ingestion — Data Engineering</h3>
+        <div id="subtab-de-documenting" class="subtab-content">
+          <h3>Documenting — Data Engineering</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Batch &amp; Lakeflow Connect</h4><p>Connections, secret scopes, PVCs, JDBC / Lakeflow Connect ingestion; templated configs for reuse, logging &amp; monitoring.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>APIs &amp; Files</h4><p>Robust API connectors (auth, rate-limit, retry/backoff) and file-based ingestion for CSV/JSON/Parquet.</p></div></div>
-          </div>
-        </div>
-
-        <div id="subtab-de-governance" class="subtab-content">
-          <h3>Governance — Data Engineering</h3>
-          <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Quality &amp; Lineage</h4><p>Data-quality dashboards (completeness, uniqueness) and lineage from source through dbt to BI. Access management aligned with platform.</p></div></div>
-          </div>
-        </div>
-
-        <div id="subtab-de-cicd" class="subtab-content">
-          <h3>CI/CD — Data Engineering</h3>
-          <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Code Collaboration</h4><p>Git branching strategy, PR reviews and automated validations for dbt/Airflow code.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Revamping</h4><p>When I started in the team, i found that the documentation was spread all over the organization and a lot of it was untrustworthy. I took the initiative to gather all the documentation to one place on confluence and rewrite what i could, delegate what i couldnt.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Expanding</h4><p>After the revamping, I wrote numerous pages in order to standardize our way of working as well as help any future new colleagues get started more easily.</p></div></div>
           </div>
         </div>
       </div>
@@ -135,18 +120,22 @@
           <button class="subtab" data-subtab="pe-ingestion">Ingestion</button>
           <button class="subtab" data-subtab="pe-cicd">CI/CD</button>
           <button class="subtab" data-subtab="pe-deploy">Deploy</button>
+          <button class="subtab" data-subtab="pe-deploy">Access management</button>
+          <button class="subtab" data-subtab="pe-deploy">Connectivity</button>
         </div>
 
         <div id="subtab-pe-testing" class="subtab-content active">
           <h3>Testing — Platform</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Framework Testing</h4><p>pytest framework for platform components, integration tests for ingestion → transformation → delivery, error-handling coverage.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Infra regression Testing</h4><p>I took ownership of an existing pytest regression testing framework, with which platform components could be tested after an infra release. I added a few tests and refactored the codebase, introducing fixtures, modules and markers.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Code-base Testing</h4><p>I implemented and owned the frameworks for dbt-bouncer and sqlfluff, both of which tools with which an organization can define and enforce coding standards in CI/CD.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Framework Testing</h4><p>I made a framework_testing dbt project which was used to test any customization we needed to do to our dbt framework, like tagging, materialization, caching.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Data quality</h4><p>I helped build a framework that pulls data test definitions from Collibra, saves them as dbt tests, deploys to production, runs the test and reports the results.</p></div></div>
           </div>
         </div>
 
         <div id="subtab-pe-tooling" class="subtab-content">
           <h3>Tooling — Platform</h3>
-          <p style="color:var(--text-light);margin-bottom:1rem;">Platform enablers I build/operate so product teams can ship data products efficiently.</p>
           <div class="tooling-tabs">
             <button class="tooling-tab active" data-tooling="dbt">dbt</button>
             <button class="tooling-tab" data-tooling="airflow">Airflow</button>
@@ -156,47 +145,52 @@
 
           <div id="tooling-dbt" class="tooling-panel active">
             <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt Platform</h4><p>Central dbt project structure, macros, tests and docs generation. Automated <code>dbt build</code> with artifact publishing.</p></div></div>
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt</h4>
+              <p>Wrote/adapted macro and materialization overwrites.</p>
+              <p>Performed package upgrades and offered support to data team colleagues.</p>
+              <p>Found ways to improve parsing time and certain options reducing the number of API calls to databricks.</p>
+              <p>Fought with management for implementing and enforcing dbt-bouncer and sqlfluff. Worked with data team colleagues to determine the standards, after which I implemented theses standards and enforced them through ci/cd. I also documented how the tools work and how to use them in vscode. Offered support.</p>
+          
+          </div></div>
             </div>
           </div>
           <div id="tooling-airflow" class="tooling-panel">
             <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow</h4><p>Shared DAG factory, custom operators/sensors, Lakeflow integration, templated configs and monitoring/logging.</p></div></div>
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow</h4>
+                <p>I helped build and expand the orchestration framework: a semantic layer on top of airflow code. The goal was to prevent data team colleagues writing their own airflow code. Instead they could write a yaml file, using templated airflow tasks.</p>
+                <p>Offered support to data team colleagues whenever their airflow dag didn't do what they expected.</p>
+                <p>Found a significant boost in performance when rendering a dbt project as airflow dag.</p>
             </div>
           </div>
           <div id="tooling-databricks" class="tooling-panel">
             <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Databricks</h4><p>Lakehouse setup, Lakeflow pipelines, notebooks, JDBC ingestion, Unity Catalog and compute management.</p></div></div>
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Databricks</h4>
+                <p>I developed a framework for ingesting data from SQLSERVER, using Lakeflow pipelines.</p>
+                <p>I built an ingestion framework for ingesting data from on-prem oracle databases, using spark JDBC.</p>
+                <p>I also did troubleshooting of issues, like sudden increases of cost or failing sql queries because of too many API calls to the unity catalog.</p>
+              
+              
+              </div></div>
             </div>
           </div>
           <div id="tooling-aks" class="tooling-panel">
             <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>AKS</h4><p>Kubernetes on Azure (AKS): secret scopes, PVCs, service connections, deployment manifests and scaling for platform workloads.</p></div></div>
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>AKS</h4>
+                <p>Kubernetes on Azure (AKS): secret scopes, PVCs, service connections, airflow helm tweaking.</p></div></div>
             </div>
-          </div>
-        </div>
-
-        <div id="subtab-pe-ingestion" class="subtab-content">
-          <h3>Ingestion — Platform</h3>
-          <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Platform Ingestion Services</h4><p>Standardised connectors and file ingestion services (API, JDBC, Lakeflow Connect) with templating, secret management and observability.</p></div></div>
           </div>
         </div>
 
         <div id="subtab-pe-cicd" class="subtab-content">
           <h3>CI/CD — Platform</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>GitHub Actions</h4><p>PR validations, pytest + dbt tests, code-quality &amp; security scans. Branch protection — failed checks block merge.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>GitHub Actions</h4>
+              <p>Implemented PR validations (sqlfluff, dbt-bouncer, yaml schema validations), Branch protection rules.</p>
+              <p>Implemented labeling of pull requests based on what's changed, offering stakeholders an overview by grouping per data product.</p>
+              <p>Suggested and implemented a deploy branch strategy for when multiple people need to deploy to the test environment.</p>
+              <p>Suggested and implemented a make-release pipeline, needed to eliminate human error when backmerging hotfixes and bugfixes.</p>
           </div>
         </div>
-
-        <div id="subtab-pe-deploy" class="subtab-content">
-          <h3>Deploy — Platform</h3>
-          <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Deploy Strategy</h4><p>Artifact publishing, docs to GitHub Pages, environmentpromotion and release automation for the new Airflow + dbt + Databricks platform.</p></div></div>
-          </div>
-        </div>
-      </div>
 
       <!-- ========== LEAD TEAM ========== -->
       <div id="category-lead-team" class="category-content">
@@ -209,20 +203,15 @@
         <div id="subtab-lead-wayofworking" class="subtab-content active">
           <h3>Lead — Way of Working</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Team Efficiency</h4><p>Reduced unnecessary meetings, strengthened refinement, challenged unsuitable frameworks — more focus on delivery.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Collaboration</h4><p>Bridging data and platform, aligning on requirements, governance and performance standards.</p></div></div>
-          </div>
-        </div>
-        <div id="subtab-lead-cop" class="subtab-content">
-          <h3>Lead — Community of Practice</h3>
-          <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>COP Practices</h4><p>Introducing COP sessions, knowledge sharing and standards for dbt/Airflow/Databricks usage.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Team Efficiency</h4><p>Made organizational changes by challenging the way of working.</p>
+              <p> In my first team, I reduced unnecessary meetings, introduced COP engineering and challenged management pushing for an unsuitable framework.</p>
+              <p>In my second team, advocateed for better feature refinement, ensuring that stakeholders are named, can be consulted and are presented with the results during development. I also pushed for more demo's, since the team was very poorly T shaped.</p></div></div>
           </div>
         </div>
         <div id="subtab-lead-future" class="subtab-content">
           <h3>Lead — Future-proofing</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Sustainable Solutions</h4><p>Advocating future-proof architectures and tooling choices, avoiding vendor lock-in and tech debt.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Sustainable Solutions</h4><p>In my first team, pushed heavily for a testing framework made with python and github instead of Gherkin and java. The python framework won eventually.</p></div></div>
           </div>
         </div>
       </div>
