@@ -200,6 +200,8 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .section-header h2 {
@@ -207,6 +209,48 @@ img {
   color: var(--primary);
 }
 
+/* Category tabs (level 1) */
+.category-tabs {
+  display: flex;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.category-tab {
+  padding: 0.85rem 1.6rem;
+  border: none;
+  background: transparent;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.category-tab:hover:not(.active) {
+  background: var(--light-bg);
+  color: var(--primary);
+}
+
+.category-tab.active {
+  background: var(--primary);
+  color: white;
+}
+
+.category-content {
+  display: none;
+}
+
+.category-content.active {
+  display: block;
+}
+
+/* Sub-tabs (level 2) */
 .subtabs {
   display: flex;
   gap: 0.25rem;
@@ -214,19 +258,19 @@ img {
   padding: 0.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
 }
 
 .subtab {
-  padding: 0.75rem 1.5rem;
+  padding: 0.65rem 1.2rem;
   border: none;
   background: transparent;
   color: var(--secondary);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 500;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s;
-  flex: 1;
   text-align: center;
 }
 
@@ -241,6 +285,7 @@ img {
 }
 
 .subtab-content {
+  display: none;
   background: white;
   padding: 2rem;
   border-radius: 8px;
@@ -248,12 +293,59 @@ img {
   margin-top: 1rem;
 }
 
+.subtab-content.active {
+  display: block;
+}
+
 .subtab-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: var(--primary);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--border);
+}
+
+/* Tooling tabs (level 3) */
+.tooling-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--light-bg);
+  padding: 0.4rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.tooling-tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tooling-tab:hover:not(.active) {
+  border-color: var(--secondary);
+  color: var(--primary);
+}
+
+.tooling-tab.active {
+  background: var(--dark);
+  color: white;
+  border-color: var(--dark);
+}
+
+.tooling-panel {
+  display: none;
+}
+
+.tooling-panel.active {
+  display: block;
 }
 
 /* Timeline */
@@ -414,7 +506,7 @@ img {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 500;
-  cursor: hover;
+  cursor: pointer;
   transition: background 0.2s;
 }
 
@@ -442,12 +534,20 @@ img {
     align-items: flex-start;
   }
   
-  .subtabs {
+  .category-tabs,
+  .subtabs,
+  .tooling-tabs {
     width: 100%;
+  }
+
+  .category-tab {
+    flex: 1;
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
   }
   
   .subtab {
-    flex: 1 1 14.28%;
+    flex: 1 1 30%;
     font-size: 0.75rem;
   }
   

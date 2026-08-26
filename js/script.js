@@ -1,102 +1,94 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Page navigation
+  // ===== Page navigation (top nav) =====
   const pageLinks = document.querySelectorAll('.nav-links a');
   const pageSections = document.querySelectorAll('.page');
+
+  function showPage(targetId) {
+    pageLinks.forEach(l => l.classList.remove('active'));
+    pageSections.forEach(s => s.classList.remove('active'));
+    const link = document.querySelector(`.nav-links a[href="#${targetId}"]`);
+    const section = document.getElementById(targetId);
+    if (link) link.classList.add('active');
+    if (section) {
+      section.classList.add('active');
+      section.style.opacity = '1';
+      section.style.transform = 'translateY(0)';
+    }
+  }
 
   pageLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
-      
-      // Remove active class from all links and pages
-      pageLinks.forEach(l => l.classList.remove('active'));
-      pageSections.forEach(section => section.classList.remove('active'));
-      
-      // Add active class to clicked link
-      this.classList.add('active');
-      
-      // Show corresponding page
       const targetId = this.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.classList.add('active');
-      }
+      showPage(targetId);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 
-  // Initialize first page
-  if (pageSections.length > 0) {
-    pageSections[0].classList.add('active');
-    if (pageLinks.length > 0) {
-      pageLinks[0].classList.add('active');
+  // init first page if none active
+  if (!document.querySelector('.page.active') && pageSections.length) {
+    showPage(pageSections[0].id);
+  } else {
+    const active = document.querySelector('.page.active');
+    if (active) {
+      active.style.opacity = '1';
+      active.style.transform = 'translateY(0)';
     }
   }
 
-  // Subtab navigation for Experience page
-  const subtabButtons = document.querySelectorAll('.subtab');
-  const subtabContents = document.querySelectorAll('.subtab-content');
+  // ===== Category tabs (level 1) =====
+  const categoryTabs = document.querySelectorAll('.category-tab');
+  const categoryContents = document.querySelectorAll('.category-content');
 
-  subtabButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove active class from all subtab buttons and contents
-      subtabButtons.forEach(btn => btn.classList.remove('active'));
-      subtabContents.forEach(content => content.classList.remove('active'));
-      
-      // Add active class to clicked button
+  categoryTabs.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const target = this.dataset.category;
+      categoryTabs.forEach(b => b.classList.remove('active'));
+      categoryContents.forEach(c => c.classList.remove('active'));
       this.classList.add('active');
-      
-      // Show corresponding subtab content
-      const targetSubtab = this.getAttribute('data-subtab');
-      const targetContent = document.getElementById('subtab-' + targetSubtab);
-      if (targetContent) {
-        targetContent.classList.add('active');
-      }
+      const content = document.getElementById('category-' + target);
+      if (content) content.classList.add('active');
     });
   });
 
-  // Initialize first subtab
-  if (subtabButtons.length > 0) {
-    subtabButtons[0].classList.add('active');
-    const firstTarget = subtabButtons[0].getAttribute('data-subtab');
-    const firstContent = document.getElementById('subtab-' + firstTarget);
-    if (firstContent) {
-      firstContent.classList.add('active');
+  // ===== Subtabs (level 2) - scoped per category =====
+  document.querySelectorAll('.subtab').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const targetId = this.dataset.subtab;
+      const category = this.closest('.category-content');
+      if (!category) return;
+      // only affect subtabs inside same category
+      category.querySelectorAll('.subtab').forEach(b => b.classList.remove('active'));
+      category.querySelectorAll('.subtab-content').forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+      const panel = document.getElementById('subtab-' + targetId);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  // ===== Tooling tabs (level 3) =====
+  document.querySelectorAll('.tooling-tab').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const target = this.dataset.tooling;
+      const parent = this.closest('.subtab-content');
+      if (!parent) return;
+      parent.querySelectorAll('.tooling-tab').forEach(b => b.classList.remove('active'));
+      parent.querySelectorAll('.tooling-panel').forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+      const panel = document.getElementById('tooling-' + target);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  // Ensure each category has at least one active subtab/content
+  categoryContents.forEach(cat => {
+    if (!cat.querySelector('.subtab.active')) {
+      const first = cat.querySelector('.subtab');
+      if (first) first.classList.add('active');
     }
-  }
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-
-  // Add subtle animation on scroll
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, observerOptions);
-
-  // Observe all sections
-  document.querySelectorAll('.page').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
+    if (!cat.querySelector('.subtab-content.active')) {
+      const firstC = cat.querySelector('.subtab-content');
+      if (firstC) firstC.classList.add('active');
+    }
   });
 });

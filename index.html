@@ -30,29 +30,31 @@
       </div>
       <div class="about-section">
         <h2>About Me</h2>
-        <p>I'm a Business Data Engineer with 3-5 years of experience designing and building data platforms and pipelines. Currently working as a Platform Engineer, I bridge the gap between data engineering and platform infrastructure, focusing on reliable data flow, test automation, and CI/CD practices.</p>
-        <p>I specialize in end-to-end data solutions - from ingestion and transformation to governance and delivery. My approach emphasizes testing, automation, and scalable architectures that empower data-driven decision making.</p>
+        <p>I am a Business Data Engineer with 3–5 years of experience across data engineering and platform engineering.
+          I spent two years building data transformations end‑to‑end — from ingestion pipelines to Data Vault and dimensional modelling.
+          I then expanded into platform engineering, helping create a new data platform powered by Airflow, dbt, and Databricks, enabling teams to deliver data products more efficiently, by focusing on reliable data flow, tooling, test automation, and CI/CD practices.</p>
+        <p>Beyond the technical work, I actively improve how teams operate: reducing unnecessary meetings, strengthening refinement sessions, challenging unsuitable frameworks, and introducing future‑proof solutions and COP practices.</p>
       </div>
       <div class="skills-grid">
         <div class="skill-card">
           <h3>ETL & ELT</h3>
-          <p>Airflow, dbt, data pipelines, batch processing</p>
+          <p>ODI, Airflow, dbt, databricks pipelines</p>
         </div>
         <div class="skill-card">
           <h3>Testing</h3>
-          <p>Pytest, data validation, test automation</p>
+          <p>Pytest, data validation, code validation, test automation</p>
         </div>
         <div class="skill-card">
           <h3>CI/CD</h3>
-          <p>GitHub Actions, automated pipelines</p>
+          <p>GitHub Actions, automated validations, deploy strategy</p>
         </div>
         <div class="skill-card">
           <h3>Data Governance</h3>
-          <p>Data quality, lineage, documentation</p>
+          <p>Data quality, access management</p>
         </div>
         <div class="skill-card">
           <h3>Data Modeling</h3>
-          <b>dbt models</b>, semantic layers</p>
+          <p>dbt models, data vault, dimensional modelling</p>
         </div>
         <div class="skill-card">
           <h3>Ingestion</h3>
@@ -61,213 +63,171 @@
       </div>
     </section>
 
-    <!-- Experience Page with Subtabs -->
+    <!-- Experience Page with Nested Tabs -->
     <section id="experience" class="page">
       <div class="section-header">
         <h2>Experience</h2>
+        <div class="category-tabs">
+          <button class="category-tab active" data-category="data-engineering">Data engineering</button>
+          <button class="category-tab" data-category="platform-engineering">Platform engineering</button>
+          <button class="category-tab" data-category="lead-team">Lead team</button>
+        </div>
+      </div>
+
+      <!-- ========== DATA ENGINEERING ========== -->
+      <div id="category-data-engineering" class="category-content active">
         <div class="subtabs">
-          <button class="subtab active" data-subtab="etl">ETL & ELT</button>
-          <button class="subtab" data-subtab="testing">Testing</button>
-          <button class="subtab" data-subtab="ci-cd">CI/CD</button>
-          <button class="subtab" data-subtab="governance">Data Governance</button>
-          <button class="subtab" data-subtab="modeling">Data Modeling</button>
-          <button class="subtab" data-subtab="ingestion">Data Ingestion</button>
-          <button class="subtab" data-subtab="platform">Platform Engineering</button>
+          <button class="subtab active" data-subtab="de-etl">ETL / ELT</button>
+          <button class="subtab" data-subtab="de-testing">Testing</button>
+          <button class="subtab" data-subtab="de-modeling">Modeling</button>
+          <button class="subtab" data-subtab="de-ingestion">Ingestion</button>
+          <button class="subtab" data-subtab="de-governance">Governance</button>
+          <button class="subtab" data-subtab="de-cicd">CI/CD</button>
         </div>
-      </div>
 
-      <!-- ETL & ELT Subtab Content -->
-      <div id="subtab-etl" class="subtab-content active">
-        <h3>ETL & ELT</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Data Pipeline Development</h4>
-              <p>Built and maintained ETL pipelines using Apache Airflow for orchestrating data flows across multiple source systems. Implemented dbt transformations for analytics-ready data models.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Data Ingestion</h4>
-              <p>Designed automated ingestion processes for structured and unstructured data from APIs, databases, and file-based sources. Ensured data validity at entry points.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Transformation Logic</h4>
-              <p>Developed transformation layers using dbt, implementing best practices for type casting, deduplication, and business logic encapsulation. Created documentation-first approach to data models.</p>
-            </div>
+        <div id="subtab-de-etl" class="subtab-content active">
+          <h3>ETL &amp; ELT — Data Engineering</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Pipeline Development</h4><p>Built and maintained ETL pipelines using ODI (Oracle) and dbt for transformations, and IWS / Apache Airflow for orchestration. Authored reusable orchestration tasks (SQL tasks, Lakeflow pipeline creators, notebook tasks) for the data team.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Transformation Logic</h4><p>Developed transformation layers in dbt with best practices for type casting, deduplication and business-logic encapsulation. Documentation-first approach to models.</p></div></div>
           </div>
         </div>
-      </div>
 
-      <!-- Testing Subtab Content -->
-      <div id="subtab-testing" class="subtab-content">
-        <h3>Testing</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Data Validation Testing</h4>
-              <p>Implemented pytest-based test suites for data pipeline validation. Created tests for data quality checks, row counts, and schema validation at each pipeline stage.</p>
-            </div>
+        <div id="subtab-de-testing" class="subtab-content">
+          <h3>Testing — Data Engineering</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Data Validation</h4><p>pytest suites for row-count, schema and quality checks at each pipeline stage. Great Expectations-style assertions.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt Tests</h4><p>Unit &amp; generic tests (unique, not_null, accepted_values) for models — integrated in CI to catch regressions.</p></div></div>
           </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Unit Tests for Transformations</h4>
-              <p>Wrote unit tests for dbt models ensuring transformation logic correctness. Integrated tests into CI pipeline to catch regressions early.</p>
-            </div>
+        </div>
+
+        <div id="subtab-de-modeling" class="subtab-content">
+          <h3>Modeling — Data Engineering</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Data Vault &amp; Dimensional</h4><p>End-to-end from ingestion through Data Vault to dimensional modelling (dimensions/facts, star schema) in dbt.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Incremental &amp; Snapshots</h4><p>Incremental models and snapshots for SCD2 history, query-performance optimised for BI.</p></div></div>
           </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Integration Testing</h4>
-              <p>Set up end-to-end integration tests verifying data flow from ingestion through transformation to final delivery. Tested error handling and recovery scenarios.</p>
-            </div>
+        </div>
+
+        <div id="subtab-de-ingestion" class="subtab-content">
+          <h3>Ingestion — Data Engineering</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Batch &amp; Lakeflow Connect</h4><p>Connections, secret scopes, PVCs, JDBC / Lakeflow Connect ingestion; templated configs for reuse, logging &amp; monitoring.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>APIs &amp; Files</h4><p>Robust API connectors (auth, rate-limit, retry/backoff) and file-based ingestion for CSV/JSON/Parquet.</p></div></div>
+          </div>
+        </div>
+
+        <div id="subtab-de-governance" class="subtab-content">
+          <h3>Governance — Data Engineering</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Quality &amp; Lineage</h4><p>Data-quality dashboards (completeness, uniqueness) and lineage from source through dbt to BI. Access management aligned with platform.</p></div></div>
+          </div>
+        </div>
+
+        <div id="subtab-de-cicd" class="subtab-content">
+          <h3>CI/CD — Data Engineering</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Code Collaboration</h4><p>Git branching strategy, PR reviews and automated validations for dbt/Airflow code.</p></div></div>
           </div>
         </div>
       </div>
 
-      <!-- CI/CD Subtab Content -->
-      <div id="subtab-ci-cd" class="subtab-content">
-        <h3>CI/CD</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>GitHub Actions Pipelines</h4>
-              <p>Configured automated CI/CD pipelines using GitHub Actions for dbt project testing and deployment. Pipeline runs tests on pull requests and deploys to production on merge.</p>
+      <!-- ========== PLATFORM ENGINEERING ========== -->
+      <div id="category-platform-engineering" class="category-content">
+        <div class="subtabs">
+          <button class="subtab active" data-subtab="pe-testing">Testing</button>
+          <button class="subtab" data-subtab="pe-tooling">Tooling</button>
+          <button class="subtab" data-subtab="pe-ingestion">Ingestion</button>
+          <button class="subtab" data-subtab="pe-cicd">CI/CD</button>
+          <button class="subtab" data-subtab="pe-deploy">Deploy</button>
+        </div>
+
+        <div id="subtab-pe-testing" class="subtab-content active">
+          <h3>Testing — Platform</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Framework Testing</h4><p>pytest framework for platform components, integration tests for ingestion → transformation → delivery, error-handling coverage.</p></div></div>
+          </div>
+        </div>
+
+        <div id="subtab-pe-tooling" class="subtab-content">
+          <h3>Tooling — Platform</h3>
+          <p style="color:var(--text-light);margin-bottom:1rem;">Platform enablers I build/operate so product teams can ship data products efficiently.</p>
+          <div class="tooling-tabs">
+            <button class="tooling-tab active" data-tooling="dbt">dbt</button>
+            <button class="tooling-tab" data-tooling="airflow">Airflow</button>
+            <button class="tooling-tab" data-tooling="databricks">Databricks</button>
+            <button class="tooling-tab" data-tooling="aks">AKS</button>
+          </div>
+
+          <div id="tooling-dbt" class="tooling-panel active">
+            <div class="timeline">
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt Platform</h4><p>Central dbt project structure, macros, tests and docs generation. Automated <code>dbt build</code> with artifact publishing.</p></div></div>
             </div>
           </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Automated Testing</h4>
-              <p>Integrated pytest suite into CI pipeline, executing data validation tests on every commit. Failed tests block merge, ensuring only validated code reaches production.</p>
+          <div id="tooling-airflow" class="tooling-panel">
+            <div class="timeline">
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow</h4><p>Shared DAG factory, custom operators/sensors, Lakeflow integration, templated configs and monitoring/logging.</p></div></div>
             </div>
           </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Artifact Publishing</h4>
-              <p>Set up automated publishing of dbt artifacts and documentation to GitHub Pages. Integrated with code quality checks and security scanning.</p>
+          <div id="tooling-databricks" class="tooling-panel">
+            <div class="timeline">
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Databricks</h4><p>Lakehouse setup, Lakeflow pipelines, notebooks, JDBC ingestion, Unity Catalog and compute management.</p></div></div>
             </div>
+          </div>
+          <div id="tooling-aks" class="tooling-panel">
+            <div class="timeline">
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>AKS</h4><p>Kubernetes on Azure (AKS): secret scopes, PVCs, service connections, deployment manifests and scaling for platform workloads.</p></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="subtab-pe-ingestion" class="subtab-content">
+          <h3>Ingestion — Platform</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Platform Ingestion Services</h4><p>Standardised connectors and file ingestion services (API, JDBC, Lakeflow Connect) with templating, secret management and observability.</p></div></div>
+          </div>
+        </div>
+
+        <div id="subtab-pe-cicd" class="subtab-content">
+          <h3>CI/CD — Platform</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>GitHub Actions</h4><p>PR validations, pytest + dbt tests, code-quality &amp; security scans. Branch protection — failed checks block merge.</p></div></div>
+          </div>
+        </div>
+
+        <div id="subtab-pe-deploy" class="subtab-content">
+          <h3>Deploy — Platform</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Deploy Strategy</h4><p>Artifact publishing, docs to GitHub Pages, environmentpromotion and release automation for the new Airflow + dbt + Databricks platform.</p></div></div>
           </div>
         </div>
       </div>
 
-      <!-- Data Governance Subtab Content -->
-      <div id="subtab-governance" class="subtab-content">
-        <h3>Data Governance</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Data Quality Metrics</h4>
-              <p>Implemented data quality monitoring and alerting systems. Created dashboards tracking completeness, uniqueness, and validity metrics across datasets.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Data Lineage</h4>
-              <p>Established data lineage tracking from source systems through transformations to final analytics outputs. Documented data flow and ownership.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Documentation Standards</h4>
-              <p>Enforced documentation standards for all data assets using dbt documentation and custom scripts. Ensured team-wide accessibility of data dictionary and model descriptions.</p>
-            </div>
+      <!-- ========== LEAD TEAM ========== -->
+      <div id="category-lead-team" class="category-content">
+        <div class="subtabs">
+          <button class="subtab active" data-subtab="lead-wayofworking">Way of Working</button>
+          <button class="subtab" data-subtab="lead-cop">Community of Practice</button>
+          <button class="subtab" data-subtab="lead-future">Future-proofing</button>
+        </div>
+
+        <div id="subtab-lead-wayofworking" class="subtab-content active">
+          <h3>Lead — Way of Working</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Team Efficiency</h4><p>Reduced unnecessary meetings, strengthened refinement, challenged unsuitable frameworks — more focus on delivery.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Collaboration</h4><p>Bridging data and platform, aligning on requirements, governance and performance standards.</p></div></div>
           </div>
         </div>
-      </div>
-
-      <!-- Data Modeling Subtab Content -->
-      <div id="subtab-modeling" class="subtab-content">
-        <h3>Data Modeling</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>dbt Modeling</h4>
-              <p>Built incremental and snapshot models using dbt for handling slowly changing dimensions and historical analytics. Implemented dimension modeling best practices.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Semantic Layer</h4>
-              <p>Designed semantic layer for analytics consumption, ensuring consistent metrics and definitions across reports and dashboards. Collaborated with BI teams on data definitions.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Star Schema Design</h4>
-              <p>Implemented star schema patterns for analytical workloads, optimizing query performance and data accessibility for business intelligence tools.</p>
-            </div>
+        <div id="subtab-lead-cop" class="subtab-content">
+          <h3>Lead — Community of Practice</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>COP Practices</h4><p>Introducing COP sessions, knowledge sharing and standards for dbt/Airflow/Databricks usage.</p></div></div>
           </div>
         </div>
-      </div>
-
-      <!-- Data Ingestion Subtab Content -->
-      <div id="subtab-ingestion" class="subtab-content">
-        <h3>Data Ingestion</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>API Integration</h4>
-              <p>Built robust API connectors for external data sources, handling authentication, rate limiting, and error recovery. Implemented retry logic and backoff strategies.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>File-Based Ingestion</h4>
-              <p>Created automated file transfer and processing pipelines for CSV, JSON, and Parquet files. Monitored file locations and triggered processing on arrival.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Streaming Sources</h4>
-              <p>Configured and monitored streaming data ingestion from various sources. Ensured data reliability and real-time availability for downstream consumption.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Platform Engineering Subtab Content -->
-      <div id="subtab-platform" class="subtab-content">
-        <h3>Platform Engineering</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Platform Infrastructure</h4>
-              <p>Working as a Platform Engineer, I build and maintain the underlying infrastructure for data operations. Focus on scalable, reliable platforms that data teams can depend on.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Tooling & Automation</h4>
-              <p>Develop internal tools and automation that improve developer experience for data teams. CI/CD pipelines, testing frameworks, and operational tooling.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <h4>Cross-Functional Collaboration</h4>
-              <p>Bridge between platform engineering and data teams, ensuring infrastructure meets data needs while maintaining security, governance, and performance standards.</p>
-            </div>
+        <div id="subtab-lead-future" class="subtab-content">
+          <h3>Lead — Future-proofing</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Sustainable Solutions</h4><p>Advocating future-proof architectures and tooling choices, avoiding vendor lock-in and tech debt.</p></div></div>
           </div>
         </div>
       </div>
