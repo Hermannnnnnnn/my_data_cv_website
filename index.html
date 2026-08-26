@@ -32,7 +32,7 @@
         <h2>About Me</h2>
         <p>I am a Business Data Engineer with 3–5 years of experience across data engineering and platform engineering. </p>
         <p><b>Data engineering:</b> I spent two years building end‑to‑end data transformations — from ingestion pipelines to Data Vault and dimensional modelling.</p>
-        <p><b>Platform engineering:</b> I then expanded into platform engineering, helping create a new data platform powered by airflow, dbt, and Databricks, enabling teams to deliver data products more efficiently, by focusing on reliable data flow, tooling, test automation, and CI/CD practices.</p>
+        <p><b>Platform engineering:</b> I then expanded into platform engineering, helping create a new data platform powered by airflow, dbt and Databricks, enabling teams to deliver data products more efficiently, by focusing on reliable data flow, tooling, test automation, and CI/CD practices.</p>
         <p><b>Data lead:</b> Beyond the technical work, I worked on improving how teams operate: reducing unnecessary meetings, organizing documentations and filling the gaps, strengthening refinement sessions, challenging unsuitable frameworks, and introducing future‑proof solutions and COP practices.</p>
       </div>
       <div class="personal-details">
@@ -86,6 +86,7 @@
               <span class="stack-tag">Apache Airflow</span>
               <span class="stack-tag">IWS</span>
               <span class="stack-tag">Databricks</span>
+              <span class="stack-tag">Oracle</span>
               <span class="stack-tag">Lakeflow Connect</span>
               <span class="stack-tag">AKS</span>
             </div>
@@ -127,7 +128,7 @@
         <div id="subtab-de-etl" class="subtab-content active">
           <h3>ETL &amp; ELT — Data Engineering</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Pipeline Development</h4><p>I built and maintained end-to-end ETL pipelines using ODI (Oracle) and dbt for transformations, and IWS and Apache Airflow for orchestration. A lot of my work as data engineer went into writing PL/SQL and also Groovy, with which I could generate the real development scripts, speeding up the development phase.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Pipeline Development</h4><p>I built and maintained end-to-end ETL pipelines: ODI (Oracle) and dbt for transformations, and IWS and Apache Airflow for orchestration. A lot of my attention as data engineer (on oracle) went into writing PL/SQL and also Groovy, with which I could generate the real development scripts, speeding up the development phase for not only myself, but my peers as well.</p></div></div>
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Ops</h4><p>Took weekly Ops rotations with colleagues. Used Ops to deepen product knowledge and troubleshoot production issues (e.g., mining metadata tables for root causes) and proposed several improvements to the Ops process.</p></div></div>
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Transformation Logic</h4><p>I helped write down <b>the big book of dbt</b>: the organization's manual of best practices for type casting, deduplication, business-logic encapsulation, test tagging, naming conventions.</p></div></div>
           </div>
@@ -169,7 +170,7 @@
         <div id="subtab-pe-testing" class="subtab-content active">
           <h3>Testing — Platform</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Infra regression Testing</h4><p>I took ownership of an already existing pytest regression testing framework, with which platform components could be tested after an infra release. I added a few tests and refactored the codebase, introducing fixtures, modules and markers.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Infra regression Testing</h4><p>I took ownership of a pytest regression testing framework, used to test platform components during an infra release. I added a few tests but the nerd in me really loved refactoring the codebase, introducing fixtures, modules and markers.</p></div></div>
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Code-base Testing</h4><p>I implemented and owned the frameworks for dbt-bouncer and SQLFluff. These are tools with which an organization can define and enforce coding standards in CI/CD.</p></div></div>
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Data quality</h4><p>I helped build a framework that pulls data test definitions from Collibra, saves them as dbt tests, deploys to production, runs the test and reports the results.</p></div></div>
           </div>
@@ -198,7 +199,7 @@
           <div id="tooling-airflow" class="tooling-panel">
             <div class="timeline">
               <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow</h4>
-                <p>I wrote airflow operators and helped build and expand the orchestration framework: a semantic layer on top of airflow code. The goal was to prevent data team colleagues writing their own airflow code. Instead they could write a YAML file, using templated airflow tasks.</p>
+                <p>Wrote airflow operators and helped build and expand the orchestration framework: a semantic layer on top of airflow code. The goal was to prevent data team colleagues writing their own airflow code. Instead they could write a YAML file, using templated airflow tasks.</p>
                 <p>Together with my colleagues, we searched and implemented ways to make airflow more stable.</p>
               </div></div>
             </div>
@@ -206,9 +207,10 @@
           <div id="tooling-Databricks" class="tooling-panel">
             <div class="timeline">
               <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Databricks</h4>
-                <p>I developed a framework for ingesting data from SQL Server, using Lakeflow pipelines.</p>
-                <p>I built an ingestion framework for ingesting data from on-prem oracle databases, using spark JDBC.</p>
-                <p>I investigated issues, like sudden increases of cost or failing sql queries because of too many API calls to the unity catalog.</p>
+                <p>Developed a framework for ingesting data from SQL Server, using Lakeflow pipelines.</p>
+                <p>Built an ingestion framework for ingesting data from on-prem oracle databases, using spark JDBC.</p>
+                <p>Helped build a trial environment: before release to production, we (shallow) clone all production data to the trial environment after which we deploy the release on trial and run our dags.</p>
+                <p>Investigated issues, like sudden increases of cost or failing sql queries because of too many API calls to the unity catalog.</p>
               </div></div>
             </div>
           </div>
@@ -225,9 +227,9 @@
           <div class="timeline">
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>GitHub Actions</h4>
               <p>Implemented PR validations (SQLFluff, dbt-bouncer, YAML schema validations) and branch protection rules.</p>
-              <p>Implemented labeling of pull requests based on what's changed, offering stakeholders an overview by grouping per data product.</p>
+              <p>Implemented automatic labeling of pull requests based on what's changed, offering stakeholders an overview on release notes by grouping per data product.</p>
               <p>Suggested and implemented a deploy branch strategy for when multiple people need to deploy to the test environment.</p>
-              <p>Suggested and implemented a make-release pipeline, needed to eliminate human error when backmerging hotfixes and bugfixes.</p>
+              <p>Suggested and implemented a pipeline to make the weekly prerelease (for trial release) and release (for production release) branches, needed to eliminate human error when backmerging hotfixes and bugfixes.</p>
               </div></div>
             </div>
           </div>
