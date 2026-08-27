@@ -139,7 +139,7 @@
           <h3>Testing — Data Engineering</h3>
           <div class="timeline">
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Load testing</h4><p>Revived an underused PL/SQL testing framework: added test templates, expanded coverage beyond file ingestion, and prevented integrity issues before they reached the Data Vault and dimensional model.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Unit &amp; regression testing</h4><p>Built an automated testing tool in Python with GitHub, CI/CD and Python, adding these technologies to the team's toolstack, knowing they would need to use them in the future when migrating to Databricks. The framework itself runs a comprehensive suite of tests, either on source ingestion (source to Data Vault) or presentation (Data Vault to dimensional model) and is still used today, replacing the tedious manual testing cycle we had before. We found many data issues, sped up the testing phase and have gained increased business trust in the data.</p>            
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Unit &amp; regression testing</h4><p>Built an automated testing tool in Python with GitHub, CI/CD and Python, adding these technologies to the team's toolstack. The framework itself runs a comprehensive suite of tests, either on source ingestion (source to Data Vault) or presentation (Data Vault to dimensional model) and is still used today, replacing the tedious manual testing cycle we had before. We found many data issues, sped up the testing phase and have gained increased business trust in the data.</p>            
             </div></div>
           </div>
         </div>
@@ -191,7 +191,7 @@
               <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt</h4>
               <p>Wrote macros and materialisation overrides for organisation-wide use.</p>
               <p>Performed package upgrades and supported data colleagues.</p>
-              <p>Found ways to improve parsing time and reduce the number of API calls to Databricks.</p>
+              <p>Found ways to improve, like reduced parsing time and reduced API calls to Databricks.</p>
               <p>Advocated for dbt-bouncer and SQLFluff. Worked with data team colleagues to determine the standards, implemented these standards and enforced them through CI/CD. Documented how the tools work and how to configure VS Code for local use.</p>
           
           </div></div>
@@ -209,7 +209,7 @@
             <div class="timeline">
               <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Databricks</h4>
                 <p>Developed a Lakeflow Pipelines framework for SQL Server ingestion.</p>
-                <p>Built an ingestion framework for on-prem Oracle databases using Spark JDBC.</p>
+                <p>Built an ingestion framework for on-prem Oracle databases to databricks using Spark JDBC.</p>
                 <p>Helped build a trial environment: before release to production, we shallow-clone production data to trial, deploy the release there and run our DAGs. This catches issues before causing incidents on production.</p>
                 <p>Investigated cost spikes and failing SQL queries caused by excessive Unity Catalog API calls.</p>
               </div></div>
@@ -226,7 +226,7 @@
         <div id="subtab-pe-cicd" class="subtab-content">
           <h3>CI/CD — Platform</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>GitHub Actions</h4>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>GitHub Actions &amp; release management</h4>
               <p>Implemented PR validations (SQLFluff, dbt-bouncer, YAML schema) and branch protection.</p>
               <p>Implemented automatic labeling of pull requests based on what's changed, offering stakeholders an overview in release notes by grouping the notes per data product.</p>
               <p>Introduced a deploy-branch strategy for concurrent deployments to the same test environment.</p>
