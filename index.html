@@ -90,6 +90,7 @@
               <span class="stack-tag">Oracle</span>
               <span class="stack-tag">Lakeflow Connect</span>
               <span class="stack-tag">AKS</span>
+              <span class="stack-tag">Azure</span>
             </div>
           </div>
           <div class="stack-group">
@@ -181,16 +182,15 @@
           <h3>Tooling — Platform</h3>
           <div class="tooling-tabs">
             <button class="tooling-tab active" data-tooling="dbt">dbt</button>
-            <button class="tooling-tab" data-tooling="airflow">Airflow</button>
+            <button class="tooling-tab" data-tooling="airflow">Airflow & AKS</button>
             <button class="tooling-tab" data-tooling="databricks">Databricks</button>
-            <button class="tooling-tab" data-tooling="aks">AKS</button>
           </div>
 
           <div id="tooling-dbt" class="tooling-panel active">
             <div class="timeline">
               <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt</h4>
               <p>Wrote macros and materialisation overrides for organisation-wide use.</p>
-              <p>Performed package upgrades and supported data colleagues.</p>
+              <p>Performed package upgrades, worked out the kinks and supported data colleagues.</p>
               <p>Found ways to improve, like reduced parsing time and reduced API calls to Databricks.</p>
               <p>Advocated for dbt-bouncer and SQLFluff. Worked with data team colleagues to determine the standards, implemented these standards and enforced them through CI/CD. Documented how the tools work and how to configure VS Code for local use.</p>
           
@@ -199,9 +199,11 @@
           </div>
           <div id="tooling-airflow" class="tooling-panel">
             <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow</h4>
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow & AKS</h4>
                 <p>Wrote Airflow operators and helped build and expand the orchestration framework: a semantic layer on top of Airflow code. The goal was to prevent data team colleagues writing their own airflow code. Instead they could write a YAML file, using templated airflow tasks.</p>
-                <p>Collaborated to improve Airflow stability.</p>
+                <p>Improved Airflow stability by tuning pod resource allocations, refining queue setup, and configuring Cosmos WATCHER mode to run resource‑heavy dbt DAGs more efficiently.</p>
+                <p>Implemented pvs, configured pvc mounts in airflow helm.</p>
+                <p>Implemented secret scopes and service connections.</p>
               </div></div>
             </div>
           </div>
@@ -213,12 +215,6 @@
                 <p>Helped build a trial environment: before release to production, we shallow-clone production data to trial, deploy the release there and run our DAGs. This catches issues before causing incidents on production.</p>
                 <p>Investigated cost spikes and failing SQL queries caused by excessive Unity Catalog API calls.</p>
               </div></div>
-            </div>
-          </div>
-          <div id="tooling-aks" class="tooling-panel">
-            <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>AKS</h4>
-                <p>Azure Kubernetes Service (AKS): secret scopes, PVCs, service connections and Airflow Helm tuning.</p></div></div>
             </div>
           </div>
         </div>
@@ -256,12 +252,13 @@
           <h3>Lead — Future-proofing</h3>
           <div class="timeline">
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Sustainable Solutions</h4><p>Reversed a management‑preferred Gherkin/Java decision by delivering a superior Python/GitHub testing framework that was ultimately adopted.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Process discipline</h4><p>Enforced disciplined change processes, stopping unplanned “cowboy” changes and ensuring proper consultation and analysis.</p></div></div>
           </div>
         </div>
         <div id="subtab-lead-mentoring" class="subtab-content">
           <h3>Lead — Mentoring</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Guiding juniors &amp; newcomers</h4><p>Guided two juniors through onboarding with in-depth weekly demos and became a go-to person for newcomers after authoring numerous Confluence pages.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Guiding juniors &amp; newcomers</h4><p>Guided two juniors through onboarding with in-depth weekly demos</p><p>Became a go-to person for newcomers after authoring numerous Confluence pages.</p></div></div>
           </div>
         </div>
       </div>
