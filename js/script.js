@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // ===== Page navigation (top nav) =====
-  const pageLinks = document.querySelectorAll('.nav-links a');
+  const pageLinks = document.querySelectorAll('.nav-links a[href^="#"]');
   const pageSections = document.querySelectorAll('.page');
 
   function showPage(targetId) {
