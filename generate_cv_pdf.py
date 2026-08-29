@@ -240,7 +240,32 @@ section_title("Experience")
 # Data Engineering
 sub_heading("Data Engineering")
 sub_sub("ETL / ELT")
-bullet("Pipeline Development:", "Built and maintained end-to-end ETL pipelines: ODI (Oracle) and dbt for transformations, IWS and Apache Airflow for orchestration. Much of my work as a data engineer (on Oracle) went into writing PL/SQL and Groovy to generate production scripts and accelerate delivery for the whole team.")
+def _load_h4_paras(h4_title):
+    try:
+        import re
+        from pathlib import Path
+        html = Path("index.html").read_text(encoding="utf-8")
+        # find h4 with exact title then capture following <p>...</p> until closing timeline-content
+        pat = re.compile(r'<h4>' + re.escape(h4_title) + r'</h4>(.*?)</div>\s*</div>', re.DOTALL)
+        m = pat.search(html)
+        if m:
+            block = m.group(1)
+            paras = re.findall(r"<p>(.*?)</p>", block, re.DOTALL)
+            cleaned = []
+            for p in paras:
+                t = re.sub(r"<[^>]+>", "", p).strip()
+                t = re.sub(r"\s+", " ", t)
+                if t:
+                    cleaned.append(t)
+            if cleaned:
+                return " ".join(cleaned)
+    except Exception as e:
+        print(f"warn: h4 parse {h4_title} failed: {e}")
+    return None
+
+_pipeline_html = _load_h4_paras("Pipeline Development")
+_pipeline_fallback = "I built and maintained end-to-end ETL pipelines: ODI (Oracle) and dbt for transformations, and IWS and Apache Airflow for orchestration. Made ways to speed up the development phase (PL/SQl scripts that generate production release script, groovy for generating ODI mappings)."
+bullet("Pipeline Development:", _pipeline_html if _pipeline_html else _pipeline_fallback)
 bullet("Ops:", "Weekly Ops rotations. Deepened product knowledge, troubleshot production issues (e.g., mining metadata tables for root causes) and proposed several improvements to the Ops process.")
 bullet("Transformation Logic:", 'Co-authored "Big Book of dbt": the organization\'s manual of best practices for type casting, deduplication, business-logic encapsulation, test tagging, naming conventions.')
 
@@ -263,11 +288,15 @@ bullet("Codebase Testing:", "Implemented and owned dbt-bouncer and SQLFluff for 
 bullet("Data quality:", "Helped build a framework that pulls test definitions from Collibra, saves them as dbt tests, deploys to production, runs the tests and reports results.")
 
 sub_sub("Tooling")
-bullet("dbt:", "Wrote macros and materialisation overrides for organisation-wide use. Performed package upgrades, worked out kinks and supported data colleagues. Reduced parsing time and Databricks API calls. Advocated dbt-bouncer/SQLFluff, defined standards with data team, implemented and enforced via CI/CD, documented VS Code setup.")
+_dbt_html = _load_h4_paras("dbt")
+_dbt_fallback = "Wrote macros and materialisation overrides for organisation-wide use. Performed package upgrades, worked out the kinks and supported data colleagues. Found ways to improve, like reduced parsing time and reduced API calls to Databricks. Advocated and lobbied for dbt-bouncer and SQLFluff. Brought it to maturity from beginning to end: worked with data team colleagues to determine the standards, implemented these standards and enforced them through CI/CD, documented how the tools work and how to configure VS Code for local use."
+bullet("dbt:", _dbt_html if _dbt_html else _dbt_fallback)
 
 bullet("Airflow & AKS:", "Wrote Airflow operators and helped build the orchestration framework: a semantic layer on top of Airflow. Data colleagues write YAML with templated tasks instead of raw Airflow code. Improved stability by tuning pod resources, queue setup, and Cosmos WATCHER mode for heavy dbt DAGs. Implemented PVCs, PVC mounts in Airflow Helm, secret scopes and service connections.")
 
-bullet("Databricks:", "Developed Lakeflow Pipelines framework for SQL Server ingestion. Built ingestion framework for on-prem Oracle -> Databricks via Spark JDBC. Helped build trial environment: shallow-clone prod data to trial, deploy release and run DAGs to catch issues before prod. Investigated cost spikes / failing SQL due to excessive Unity Catalog API calls.")
+_databricks_html = _load_h4_paras("Databricks")
+_databricks_fallback = "Developed a Lakeflow Pipelines framework for SQL Server ingestion. Built an ingestion framework for on-prem Oracle databases to databricks using Spark JDBC. Co-built a trial environment: before release to production, we shallow-clone production data to trial, deploy the release there and run our DAGs. This catches issues before causing incidents on production. Investigated cost spikes and failing SQL queries caused by excessive Unity Catalog API calls."
+bullet("Databricks:", _databricks_html if _databricks_html else _databricks_fallback)
 
 sub_sub("CI/CD")
 def _load_cicd_text():
@@ -305,7 +334,30 @@ bullet("Sustainable Solutions:", "Reversed a management-preferred Gherkin/Java d
 bullet("Process discipline:", 'Enforced disciplined change processes, stopping unplanned "cowboy" changes and ensuring proper consultation and analysis.')
 
 sub_sub("Mentoring")
-bullet("Guiding juniors & newcomers:", "Guided two juniors through onboarding with in-depth weekly demos. Became go-to person for newcomers after authoring numerous Confluence pages.")
+def _load_mentoring_text():
+    try:
+        import re
+        from pathlib import Path
+        html = Path("index.html").read_text(encoding="utf-8")
+        m = re.search(r'id="subtab-lead-mentoring"(.*?)(?:</div>\s*){3}', html, re.DOTALL)
+        if m:
+            block = m.group(1)
+            paras = re.findall(r"<p>(.*?)</p>", block, re.DOTALL)
+            cleaned = []
+            for p in paras:
+                t = re.sub(r"<[^>]+>", "", p).strip()
+                t = re.sub(r"\s+", " ", t)
+                if t:
+                    cleaned.append(t)
+            if cleaned:
+                return " ".join(cleaned)
+    except Exception as e:
+        print(f"warn: mentoring parse failed: {e}")
+    return None
+
+_mentoring_html = _load_mentoring_text()
+_mentoring_fallback = "Guided two juniors through their onboarding with in-depth weekly demos. Became the go-to person for things related to testing, performance, data vault and release."
+bullet("Guiding juniors & newcomers:", _mentoring_html if _mentoring_html else _mentoring_fallback)
 
 # ===== EMPLOYMENT =====
 section_title("Employment")
