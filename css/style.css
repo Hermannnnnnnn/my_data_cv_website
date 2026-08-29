@@ -90,6 +90,49 @@ img {
   color: var(--accent);
 }
 
+.nav-links a.btn-pdf {
+  background: var(--primary);
+  color: white !important;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.nav-links a.btn-pdf:hover {
+  background: var(--accent);
+  color: white !important;
+}
+
+.btn-hero-pdf,
+.btn-hero-print {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+}
+.btn-hero-pdf {
+  background: var(--primary);
+  color: white;
+}
+.btn-hero-pdf:hover {
+  background: var(--accent);
+  color: white;
+}
+.btn-hero-print {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+.btn-hero-print:hover {
+  background: var(--light-bg);
+}
+
 /* Pages */
 .page {
   min-height: 100vh;
@@ -697,5 +740,71 @@ img {
   
   .contact-container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Print styles - for Save as PDF via browser */
+@media print {
+  .navbar {
+    position: static;
+    box-shadow: none;
+    border-bottom: 2px solid var(--border);
+  }
+  .nav-links a.btn-pdf,
+  .btn-hero-print {
+    display: none !important;
+  }
+  .page {
+    display: block !important;
+    min-height: auto;
+    padding-top: 0;
+    page-break-inside: avoid;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .page.active {
+    display: block !important;
+  }
+  .category-content,
+  .subtab-content,
+  .tooling-panel {
+    display: block !important;
+  }
+  .category-tabs,
+  .subtabs,
+  .tooling-tabs {
+    display: none !important;
+  }
+  .hero {
+    padding: 2rem 1rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  body {
+    background: white;
+    font-size: 11px;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .personal-details,
+  .toolstack,
+  .subtab-content,
+  .education-card,
+  .contact-form {
+    box-shadow: none;
+    border: 1px solid var(--border);
+    break-inside: avoid;
+  }
+  footer {
+    break-before: avoid;
+  }
+  a {
+    color: var(--primary) !important;
+  }
+  .education-card a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.7em;
+    word-break: break-all;
   }
 }

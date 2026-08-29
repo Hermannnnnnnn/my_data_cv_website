@@ -18,6 +18,7 @@
       <a href="#employment">Employment</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
+      <a href="assets/Herman_Suykerbuyk_CV.pdf" download class="btn-pdf" title="Download CV as PDF">⬇ PDF</a>
     </nav>
   </header>
 
@@ -28,6 +29,10 @@
         <h1 class="hero-title">Business Data Engineer</h1>
         <p class="hero-subtitle">Platform Engineer | Data Infrastructure | ETL & Pipelines</p>
         <div class="hero-badge">3-5 years experience</div>
+        <div style="margin-top:1.5rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+          <a href="assets/Herman_Suykerbuyk_CV.pdf" download class="btn-hero-pdf">Download CV (PDF)</a>
+          <button onclick="window.print()" class="btn-hero-print">Print this page</button>
+        </div>
       </div>
       <div class="about-section">
         <h2>About Me</h2>
@@ -131,7 +136,7 @@
         <div id="subtab-de-etl" class="subtab-content active">
           <h3>ETL &amp; ELT — Data Engineering</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Pipeline Development</h4><p>I built and maintained end-to-end ETL pipelines: ODI (Oracle) and dbt for transformations, and IWS and Apache Airflow for orchestration. Much of my work as a data engineer (on Oracle) went into writing PL/SQL and Groovy, with which I could generate production scripts and accelerate delivery for the whole team.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Pipeline Development</h4><p>I built and maintained end-to-end ETL pipelines: ODI (Oracle) and dbt for transformations, and IWS and Apache Airflow for orchestration. Made ways to speed up the development phase (PL/SQl scripts that generate production release script, groovy for generating ODI mappings).</p></div></div>
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Ops</h4><p>Took weekly Ops rotations with colleagues. Used Ops to deepen product knowledge and troubleshoot production issues (e.g., mining metadata tables for root causes) and proposed several improvements to the Ops process.</p></div></div>
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Transformation Logic</h4><p>Co-authored <b>"Big Book of dbt"</b>: the organization's manual of best practices for type casting, deduplication, business-logic encapsulation, test tagging, naming conventions.</p></div></div>
           </div>
@@ -141,7 +146,7 @@
           <h3>Testing — Data Engineering</h3>
           <div class="timeline">
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Load testing</h4><p>Revived an underused PL/SQL testing framework: added test templates, expanded coverage beyond file ingestion, and prevented integrity issues before they reached the Data Vault and dimensional model.</p></div></div>
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Unit &amp; regression testing</h4><p>Built an automated testing tool in Python with GitHub, CI/CD and Python, adding these technologies to the team's toolstack. The framework itself runs a comprehensive suite of tests, either on source ingestion (source to Data Vault) or presentation (Data Vault to dimensional model) and is still used today, replacing the tedious manual testing cycle we had before. We found many data issues, sped up the testing phase and have gained increased business trust in the data.</p>            
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Unit &amp; regression testing</h4><p>Built an automated regression testing tool in Python with GitHub, CI/CD and Python, adding these technologies to the team's toolstack. The framework itself runs a comprehensive suite of tests, either on source ingestion (source to Data Vault) or presentation (Data Vault to dimensional model) and is still used today, replacing the tedious manual testing cycle we had before. We found many data issues, sped up the testing phase and have gained increased business trust in the data.</p>            
             </div></div>
           </div>
         </div>
@@ -181,42 +186,25 @@
 
         <div id="subtab-pe-tooling" class="subtab-content">
           <h3>Tooling — Platform</h3>
-          <div class="tooling-tabs">
-            <button class="tooling-tab active" data-tooling="dbt">dbt</button>
-            <button class="tooling-tab" data-tooling="airflow">Airflow & AKS</button>
-            <button class="tooling-tab" data-tooling="databricks">Databricks</button>
-          </div>
-
-          <div id="tooling-dbt" class="tooling-panel active">
-            <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt</h4>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>dbt</h4>
               <p>Wrote macros and materialisation overrides for organisation-wide use.</p>
               <p>Performed package upgrades, worked out the kinks and supported data colleagues.</p>
               <p>Found ways to improve, like reduced parsing time and reduced API calls to Databricks.</p>
-              <p>Advocated for dbt-bouncer and SQLFluff. Worked with data team colleagues to determine the standards, implemented these standards and enforced them through CI/CD. Documented how the tools work and how to configure VS Code for local use.</p>
-          
-          </div></div>
-            </div>
-          </div>
-          <div id="tooling-airflow" class="tooling-panel">
-            <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow & AKS</h4>
-                <p>Wrote Airflow operators and helped build and expand the orchestration framework: a semantic layer on top of Airflow code. The goal was to prevent data team colleagues writing their own airflow code. Instead they could write a YAML file, using templated airflow tasks.</p>
-                <p>Improved Airflow stability by tuning pod resource allocations, refining queue setup, and configuring Cosmos WATCHER mode to run resource‑heavy dbt DAGs more efficiently.</p>
-                <p>Implemented pvc's and configured pvc mounts in airflow helm.</p>
-                <p>Implemented secret scopes and service connections.</p>
-              </div></div>
-            </div>
-          </div>
-          <div id="tooling-databricks" class="tooling-panel">
-            <div class="timeline">
-              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Databricks</h4>
-                <p>Developed a Lakeflow Pipelines framework for SQL Server ingestion.</p>
-                <p>Built an ingestion framework for on-prem Oracle databases to databricks using Spark JDBC.</p>
-                <p>Helped build a trial environment: before release to production, we shallow-clone production data to trial, deploy the release there and run our DAGs. This catches issues before causing incidents on production.</p>
-                <p>Investigated cost spikes and failing SQL queries caused by excessive Unity Catalog API calls.</p>
-              </div></div>
-            </div>
+              <p>Advocated and lobbied for dbt-bouncer and SQLFluff. Brought it to maturity from beginning to end: worked with data team colleagues to determine the standards, implemented these standards and enforced them through CI/CD, documented how the tools work and how to configure VS Code for local use.</p>
+            </div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Airflow & AKS</h4>
+              <p>Wrote Airflow operators and helped build and expand the orchestration framework: a semantic layer on top of Airflow code. The goal was to prevent data team colleagues writing their own airflow code. Instead they could write a YAML file, using templated airflow tasks.</p>
+              <p>Improved Airflow stability by tuning pod resource allocations, refining queue setup, and configuring Cosmos WATCHER mode to run resource‑heavy dbt DAGs more efficiently.</p>
+              <p>Implemented pvc's and configured pvc mounts in airflow helm.</p>
+              <p>Implemented secret scopes and service connections.</p>
+            </div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Databricks</h4>
+              <p>Developed a Lakeflow Pipelines framework for SQL Server ingestion.</p>
+              <p>Built an ingestion framework for on-prem Oracle databases to databricks using Spark JDBC.</p>
+              <p>Co-built a trial environment: before release to production, we shallow-clone production data to trial, deploy the release there and run our DAGs. This catches issues before causing incidents on production.</p>
+              <p>Investigated cost spikes and failing SQL queries caused by excessive Unity Catalog API calls.</p>
+            </div></div>
           </div>
         </div>
 
@@ -225,9 +213,8 @@
           <div class="timeline">
             <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>GitHub Actions &amp; release management</h4>
               <p>Implemented PR validations (SQLFluff, dbt-bouncer, YAML schema) and branch protection.</p>
-              <p>Implemented automatic labeling of pull requests based on what's changed, offering stakeholders an overview in release notes by grouping the notes per data product.</p>
-              <p>Introduced a deploy-branch strategy for concurrent deployments to the same test environment.</p>
-              <p>Built a pipeline to create weekly prerelease (trial) and release (production) branches, eliminating human error when back-merging hotfixes.</p>
+              <p>Suggested and built a deploy-branch strategy for concurrent deployments to the same test environment.</p>
+              <p>Brought release management to maturity: built a pipeline to generate releases and release notes, implemented automatic labeling of pull requests with dataproduct tags, offering stakeholders insight.</p>
               </div></div>
             </div>
           </div>
@@ -259,7 +246,7 @@
         <div id="subtab-lead-mentoring" class="subtab-content">
           <h3>Lead — Mentoring</h3>
           <div class="timeline">
-            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Guiding juniors &amp; newcomers</h4><p>Guided two juniors through their onboarding with in-depth weekly demos.</p><p>Became a go-to person for newcomers after authoring numerous Confluence pages.</p></div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><h4>Guiding juniors &amp; newcomers</h4><p>Guided two juniors through their onboarding with in-depth weekly demos.</p><p>Became the go-to person for things related to testing, performance, data vault and release.</p></div></div>
           </div>
         </div>
       </div>
@@ -307,9 +294,9 @@
       <h3 class="education-subtitle">Certifications</h3>
       <div class="education-grid">
         <div class="education-card">
-          <h3>Astronomer Certification – Apache Airflow Fundamentals</h3>
-          <p>Mar 2024</p>
-          <p><small><a href="https://www.credly.com/badges/4c4747cb-e8c3-44ac-9631-faebb1b53257/linked_in_profile" target="_blank" rel="noopener">credential ↗</a></small></p>
+          <h3>Certified Data Vault 2.0 Practitioner</h3>
+          <p>Jul 2023</p>
+          <p><small><a href="https://www.credential.net/d3e744a4-3605-43ae-bff3-290800b8cb29#acc.ihcWado1" target="_blank" rel="noopener">credential ↗</a></small></p>
         </div>
         <div class="education-card">
           <h3>dbt Fundamentals</h3>
@@ -317,14 +304,14 @@
           <p><small><a href="https://credentials.getdbt.com/b6d0492c-8c7f-4d3b-8be2-840a8ed39fc0#acc.7dSCGywh" target="_blank" rel="noopener">credential ↗</a></small></p>
         </div>
         <div class="education-card">
-          <h3>Certified Data Vault 2.0 Practitioner</h3>
-          <p>Jul 2023</p>
-          <p><small><a href="https://www.credential.net/d3e744a4-3605-43ae-bff3-290800b8cb29#acc.ihcWado1" target="_blank" rel="noopener">credential ↗</a></small></p>
-        </div>
-        <div class="education-card">
           <h3>Databricks Lakehouse Fundamentals</h3>
           <p>Dec 2023</p>
           <p><small><a href="https://credentials.databricks.com/bb657983-ae44-4aa7-882b-da4859f99716#acc.WP3f42QU" target="_blank" rel="noopener">credential ↗</a></small></p>
+        </div>
+        <div class="education-card">
+          <h3>Astronomer Certification – Apache Airflow Fundamentals</h3>
+          <p>Mar 2024</p>
+          <p><small><a href="https://www.credly.com/badges/4c4747cb-e8c3-44ac-9631-faebb1b53257/linked_in_profile" target="_blank" rel="noopener">credential ↗</a></small></p>
         </div>
         <div class="education-card">
           <h3>Cert Prep: Scrum Master (LinkedIn Learning)</h3>
@@ -348,6 +335,7 @@
         <div class="contact-info">
           <h3>Get in Touch</h3>
           <p>Email: suykerbuykh@gmail.com</p>
+          <p>Phone: <a href="tel:+32491125420">+32 491 12 54 20</a></p>
           <p>LinkedIn: linkedin.com/in/herman-suykerbuyk-16299323b</p>
           <p>GitHub: https://github.com/Hermannnnnnnn</p>
         </div>
