@@ -92,6 +92,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // ===== PDF link - force new tab (ensure not handled as SPA page) =====
+  const pdfLink = document.querySelector('a.btn-pdf');
+  if (pdfLink) {
+    pdfLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.open(this.href, '_blank', 'noopener');
+    });
+  }
+
   // ===== Contact form -> mailto (option 1, static) =====
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
