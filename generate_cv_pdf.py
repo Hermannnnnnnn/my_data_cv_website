@@ -721,8 +721,8 @@ if _formal:
     for date, title in _formal:
         employment_entry(date, title, "")
 else:
-    employment_entry("Sep 2008 - Jul 2012", "Bachelor of Science in Chemistry — University of Antwerp, Belgium", "")
-    employment_entry("Sep 2014 - Jul 2018", "Bachelor of Science in Mathematics — University of Antwerp, Belgium", "")
+    employment_entry("Sep 2008 - Jul 2011", "Bachelor of Science in Chemistry — University of Antwerp, Belgium", "")
+    employment_entry("Sep 2014 - Jul 2017", "Bachelor of Science in Mathematics — University of Antwerp, Belgium", "")
     employment_entry("Apr 2022 - Sep 2022", "Data Science Training Program — Cevora, Belgium", "")
 
 sub_sub("Certifications")
